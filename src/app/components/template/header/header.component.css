@@ -1,10 +1,10 @@
 img{
-    height: 3rem;
+    height: 2.3rem;
 }
 
 .header{
- justify-content: right;
- height: 10%;
+    justify-content: center;
+    height: 10%;
 }
 
 span{
