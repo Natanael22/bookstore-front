@@ -13,3 +13,17 @@
     color: rgb(150, 145, 145);
     font-weight: 500;
 }
+
+button{
+    margin-bottom: .8rem;
+}
+
+.edit{
+    color: rgb(205, 223, 66);
+}
+
+.delete{
+    color: rgb(227, 84, 84);
+    margin-left: .7rem;
+}
+
