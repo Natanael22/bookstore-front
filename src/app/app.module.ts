@@ -19,6 +19,10 @@ import { CategoriaReadComponent } from './components/views/categoria/categoria-r
 import {MatTableModule} from '@angular/material/table'; 
 import {MatButtonModule} from '@angular/material/button';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';   
+import {MatInputModule} from '@angular/material/input'; 
+import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { CategoriaCreateComponent } from './components/views/categoria/categoria
     MatCardModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
