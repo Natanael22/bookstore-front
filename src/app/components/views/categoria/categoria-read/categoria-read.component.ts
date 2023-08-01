@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Categoria } from '../categoria.model';
 import { CategoriaService } from '../categoria.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-categoria-read',
@@ -13,7 +14,7 @@ export class CategoriaReadComponent {
 
   categorias: Categoria[] = []
 
-  constructor(private service: CategoriaService){}
+  constructor(private service: CategoriaService, private router: Router){}
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -27,5 +28,9 @@ export class CategoriaReadComponent {
       console.log(resposta);
       this.categorias = resposta;
     })
+  }
+
+  navegarCreate(){
+    this.router.navigate(["categorias/create"])
   }
 }
