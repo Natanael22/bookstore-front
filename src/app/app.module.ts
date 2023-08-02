@@ -22,7 +22,9 @@ import { CategoriaCreateComponent } from './components/views/categoria/categoria
 import {MatInputModule} from '@angular/material/input'; 
 import { FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
-import {MatSnackBarModule} from '@angular/material/snack-bar'; 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
+import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component'; 
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     NavComponent,
     HomeComponent,
     CategoriaReadComponent,
-    CategoriaCreateComponent
+    CategoriaCreateComponent,
+    CategoriaDeleteComponent,
+    CategoriaUpdateComponent
   ],
   imports: [
     BrowserModule,
