@@ -1,11 +1,11 @@
 <div class="content">
     <div class="title">
-        <h1>Categoria</h1>
+        <h1>Livro</h1>
     </div>
 
-    <button class="mat-elevation-z8" (click)="navegarCreate()" mat-stroked-button color="primary">Nova Categoria</button>
+    <button class="mat-elevation-z8" (click)="navegarCreate()" mat-stroked-button color="primary">Novo Livro</button>
 
-    <table mat-table [dataSource]="categorias" class="mat-elevation-z8">
+    <table mat-table [dataSource]="livros" class="mat-elevation-z8">
 
         <!-- Position Column -->
         <ng-container matColumnDef="id">
@@ -14,24 +14,20 @@
         </ng-container>
       
         <!-- Name Column -->
-        <ng-container matColumnDef="nome">
-          <th mat-header-cell *matHeaderCellDef> Nome </th>
-          <td mat-cell *matCellDef="let row"> {{row.nome}} </td>
+        <ng-container matColumnDef="nomeAutor">
+          <th mat-header-cell *matHeaderCellDef> Nome do autor</th>
+          <td mat-cell *matCellDef="let row"> {{row.nomeAutor}} </td>
         </ng-container>
       
         <!-- Weight Column -->
-        <ng-container matColumnDef="descricao">
-          <th mat-header-cell *matHeaderCellDef> Descricao </th>
-          <td mat-cell *matCellDef="let row"> {{row.descricao}} </td>
+        <ng-container matColumnDef="texto">
+          <th mat-header-cell *matHeaderCellDef> Texto </th>
+          <td mat-cell *matCellDef="let row"> {{row.texto}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="livros">
-          <th mat-header-cell *matHeaderCellDef> Livros </th>
-          <td mat-cell *matCellDef="let row">
-            <a class="livros" routerLink="{{row.id}}/livros">
-              <i class="material-icons">book</i>
-            </a>
-          </td>
+        <ng-container matColumnDef="titulo">
+          <th mat-header-cell *matHeaderCellDef> Titulo </th>
+          <td mat-cell *matCellDef="let row">{{row.titulo}}</td>
         </ng-container>
       
         <!-- Symbol Column -->

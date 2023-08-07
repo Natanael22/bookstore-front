@@ -1,0 +1,29 @@
+.content{
+    width: 90%;
+    margin: 1.4rem auto auto auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title h1{
+    font-size: 2rem;
+    color: rgb(150, 145, 145);
+    font-weight: 500;
+}
+
+button{
+    margin-bottom: .8rem;
+}
+
+.edit{
+    color: rgb(205, 223, 66);
+}
+
+.delete{
+    color: rgb(227, 84, 84);
+    margin-left: .7rem;
+}
+
