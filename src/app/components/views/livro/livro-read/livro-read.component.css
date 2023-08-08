@@ -1,6 +1,7 @@
 .content{
     width: 90%;
     margin: 1.4rem auto auto auto;
+    
 }
 
 .title{
@@ -26,4 +27,3 @@ button{
     color: rgb(227, 84, 84);
     margin-left: .7rem;
 }
-

@@ -15,12 +15,17 @@ export class LivroService {
   constructor(private http: HttpClient, private _snack: MatSnackBar) { }
 
   findAll():Observable<Livro[]>{
-    const url = `${this.baseUrl}/livros`
+    const url = `${this.baseUrl}/livros/all`
     return this.http.get<Livro[]>(url);
   }
 
-  create(livro: Livro):Observable<Livro>{
-    const url = `${this.baseUrl}/livros`
+  findAllByCategoria(id_cat :String):Observable<Livro[]>{
+    const url = `${this.baseUrl}/livros?categoria=${id_cat}`
+    return this.http.get<Livro[]>(url);
+  }
+
+  create(livro: Livro, id_cat: String):Observable<Livro>{
+    const url = `${this.baseUrl}/livros?categoria=${id_cat}`
     return this.http.post<Livro>(url,livro);
   }
 

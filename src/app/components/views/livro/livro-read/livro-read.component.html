@@ -13,6 +13,11 @@
           <td mat-cell *matCellDef="let row"> {{row.id}} </td>
         </ng-container>
       
+        <ng-container matColumnDef="titulo">
+          <th mat-header-cell *matHeaderCellDef> Titulo </th>
+          <td mat-cell *matCellDef="let row">{{row.titulo}}</td>
+        </ng-container>
+
         <!-- Name Column -->
         <ng-container matColumnDef="nomeAutor">
           <th mat-header-cell *matHeaderCellDef> Nome do autor</th>
@@ -25,11 +30,6 @@
           <td mat-cell *matCellDef="let row"> {{row.texto}} </td>
         </ng-container>
 
-        <ng-container matColumnDef="titulo">
-          <th mat-header-cell *matHeaderCellDef> Titulo </th>
-          <td mat-cell *matCellDef="let row">{{row.titulo}}</td>
-        </ng-container>
-      
         <!-- Symbol Column -->
         <ng-container matColumnDef="acoes">
           <th class="mat-header" mat-header-cell *matHeaderCellDef> Acoes </th>
