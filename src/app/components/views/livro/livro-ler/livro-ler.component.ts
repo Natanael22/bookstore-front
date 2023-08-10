@@ -5,11 +5,11 @@ import { FormControl, Validators } from '@angular/forms';
 import { Livro } from '../livro.model';
 
 @Component({
-  selector: 'app-livro-update',
-  templateUrl: './livro-update.component.html',
-  styleUrls: ['./livro-update.component.css']
+  selector: 'app-livro-ler',
+  templateUrl: './livro-ler.component.html',
+  styleUrls: ['./livro-ler.component.css']
 })
-export class LivroUpdateComponent {
+export class LivroLerComponent {
 
   id_cat = ''  
 
@@ -20,9 +20,7 @@ export class LivroUpdateComponent {
     texto:''
   }
   
-  titulo = new FormControl("",[Validators.minLength(3)])
-  nomeAutor = new FormControl("",[Validators.minLength(3)])
-  texto = new FormControl("",[Validators.minLength(10)])
+  
   
   constructor(private service: LivroService,private route: ActivatedRoute, private router: Router){}
 
@@ -60,16 +58,4 @@ export class LivroUpdateComponent {
     this.router.navigate([`categorias/${this.id_cat}/livros`])
   }
 
-  getMessage(){
-    if(this.titulo.invalid){
-      return "o campo TITULO deve conter entre 3 e 100 caracteres"
-    }
-    if(this.nomeAutor.invalid){
-      return "o campo NOME DO AUTOR deve conter entre 3 e 100 caracteres"
-    }
-    if(this.texto.invalid){
-      return "o campo TEXTO deve conter entre 10 e 2mi caracteres"
-    }
-    return false
-  }
 }

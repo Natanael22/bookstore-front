@@ -45,6 +45,9 @@ export class LivroDeleteComponent {
     this.service.delete(this.livro.id!).subscribe(resposta => {
       this.router.navigate([`/categorias/${this.id_cat}/livros`])
       this.service.mensagem("Livro deletado com Sucesso")
+    },err =>{
+      this.router.navigate([`/categorias/${this.id_cat}/livros`])
+      this.service.mensagem("erro inesperado")
     })
   }
 

@@ -34,8 +34,8 @@ export class LivroService {
     return this.http.post<Livro>(url,livro);
   }
 
-  update(id: string, livro: Livro):Observable<void>{
-    const url = `${this.baseUrl}/livros/${id}`
+  update( livro: Livro):Observable<void>{
+    const url = `${this.baseUrl}/livros/${livro.id}`
     return this.http.put<void>(url, livro);
   }
 

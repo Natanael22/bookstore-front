@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LivroReadComponent {
 
-  displayedColumns: string[] = ['id','titulo', 'nomeAutor', 'texto','acoes'];
+  displayedColumns: string[] = ['id','titulo', 'livros','acoes'];
 
   livros: Livro[] = []
 
